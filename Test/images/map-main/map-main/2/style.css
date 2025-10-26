@@ -1,0 +1,91 @@
+body { 
+    font-family: Inter, Roboto, system-ui, sans-serif; 
+    background:#f3f4f6; 
+    margin:0; 
+    padding:16px; 
+}
+
+h1 { 
+    font-size:18px; 
+    margin:0 0 10px 0; 
+} 
+
+#app {
+    display: flex; 
+    gap: 16px; 
+}
+
+#canvasWrap { 
+    display: flex;
+    background: white; 
+    border-radius: 8px; 
+    padding: 10px; 
+    box-shadow: 0 6px 18px rgba(0,0,0,.06); 
+    width: 100%;  /* Made responsive */
+    max-width: 800px;  /* Limit to prevent overflow */
+    height: auto;       
+    overflow: visible;  
+}
+
+svg { 
+    width: 100%; 
+    height: auto;  /* Preserve aspect ratio */
+    max-width: 100%;     
+    max-height: 100%;
+    overflow: visible; 
+    touch-action: none; 
+}
+
+.path-line {
+    stroke: #0ea5a4 !important;
+    stroke-width: 4 !important;
+    stroke-dasharray: 6 6 !important;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 3px rgba(14, 165, 164, 0.5));
+}
+
+#pathLines polygon { 
+    pointer-events: none;
+}
+
+rect[id]:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn {
+    margin-top:6px; 
+    padding:6px 12px; 
+    cursor:pointer; 
+}
+/* .btn:hover { background: #0056b3; } */
+
+.start {
+    fill: #90EE90 !important;  
+    stroke: #228B22 !important;
+    stroke-width: 3;
+}
+.end {
+    fill: #FFB6C1 !important;  
+    stroke: #DC143C !important;
+    stroke-width: 3;
+}
+.highlight {
+    fill: #FFFFE0 !important;  
+    stroke: #FFD700 !important;
+    stroke-width: 2;
+}
+.path-line {
+    transition: opacity 0.3s ease;
+}
+#toggleFloor {
+    background: #28a745;
+}
+#toggleFloor:hover {
+    background: #218838;
+}
+.info {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #333;
+}

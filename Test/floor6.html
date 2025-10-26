@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Map - School Navigation</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo"><img id="logo" src="images/img3.png" alt="error"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="floor1.html">Rooms</a></li>
+                    <li><a href="#" onclick="showSection('windows-section')">Windows</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="rooms-section">
+        <div class="rooms-container">
+            <div class="room-list">
+
+                <div class="controls">
+                    <div><strong>Instructions</strong></div>
+                    <div class="info">Click to choose <em>Start</em>, then click another to choose <em>End</em>.</div>
+                    <div class="info" id="pathInfo"></div>
+                    <div style="margin-top:8px"><small>Rooms: Clinic, Maintenance, Cr2, Drugtest, Admission, etc.</small></div>
+                    
+                    <div style="margin-top:15px;">
+                        <input id="fromInput" type="text" placeholder="Current Location" style="
+                            width: 180px;
+                             padding: 8px;
+                              margin: 4px 0 12px 0;
+                               box-sizing: border-box;
+                                 border: 1px solid #ccc;
+                                     border-radius: 10px;"><br>
+                        <input id="toInput" type="text" placeholder="Destination" style="
+                           width: 180px;
+                              padding: 8px;
+                                margin: 4px 0 12px 0;
+                                 box-sizing: border-box;
+                                     border: 1px solid #ccc;
+                                      border-radius: 10px;">                       
+                         <button id="searchBtn" class="btn-search">Search</button>
+                    </div>
+                    <div style="margin-top:12px;">
+                    </div>
+                </div>
+                    <a class="room-button" href="floor1.html">Floor 1</a>
+                    <a class="room-button" href="floor2.html">Floor 2</a>
+                    <a class="room-button" href="floor3.html">Floor 3</a>
+                    <a class="room-button" href="floor4.html">Floor 4</a>
+                    <a class="room-button" href="floor5.html">Floor 5</a>
+                    <a class="room-button" href="floor6.html">Floor 6</a>
+            </div>
+
+            <div class="map-container" style="width: 800px; height: auto; overflow: hidden;">
+                <button id="zoomIn" class="btn-zoomIn">+</ion-icon></button>
+                <button id="zoomOut" class="btn-zoomOut">−</ion-icon></button>
+
+            </div>
+        </div>
+    </section>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
